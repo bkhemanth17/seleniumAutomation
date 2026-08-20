@@ -38,6 +38,9 @@ public class xpath {
         //OR operator -> atleast one should true
         driver.findElement(By.xpath("//input[@name='search' or @placeholder = 'Search']"));
 
+        //not operator -> (T becomes F, F becomes T)
+        driver.findElement(By.xpath("//a[not(text() = 'iPhone')]"));
+
         //functions xpath with inner text
         //text() -> for some anchor tag elements no inner text so we cann't use and for some elements with no attributes may contains inner text, at that case text() will be used
         driver.findElement(By.xpath("//a[text() = 'iPhone']"));
@@ -81,13 +84,19 @@ public class xpath {
         //child
         //button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')]
         //button[@title='Add to Cart']/child::i
+        //button[@title='Add to Cart']/i
         /*
         if there were more than one element than use indexation
         (//button[@title='Add to Cart']/child::i)[3]
         last() function also used
         (//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()]
+
+                            child shortcut(/)
+        can directly use / instead of child::
+        //button[@title='Add to Cart']/i
          */
         driver.findElement(By.xpath("//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')]"));
+        driver.findElement(By.xpath("//button[@title='Add to Cart']/i"));
 
         //ancestor
         //i[contains(@class, 'fa-solid')]/ancestor::div[@class = 'button-group']
@@ -97,8 +106,13 @@ public class xpath {
         //descendant
         //div[@class ='nav float-start']/descendant::form
         //div[@class ='nav float-start']/descendant::form[@id='form-currency']
-        /* (//div[@class ='nav float-start']/descendant::form)[1] */
+        /* (//div[@class ='nav float-start']/descendant::form)[1]
+                        descendant shortcut (//)
+        //div[@class ='nav float-start']/descendant::form
+        //div[@class ='nav float-start']//form
+         */
         driver.findElement(By.xpath("//div[@class ='nav float-start']/descendant::form"));
+        driver.findElement(By.xpath("//div[@class ='nav float-start']//form"));
 
         //following siblings
         //div[@class = 'nav float-start']/following::div
@@ -116,7 +130,20 @@ public class xpath {
         /* (//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()] */
         driver.findElement(By.xpath("(//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()]"));
 
-        
+        /*
+                                        shortcuts
+        descendant (//)
+        //div[@class ='nav float-start']/descendant::form
+        //div[@class ='nav float-start']//form
+
+        child(/)
+        can directly use / instead of child::
+        //button[@title='Add to Cart']/child::i
+        //button[@title='Add to Cart']/i
+
+        no shortcut for following,preceding siblings, ancestor
+        can use / for following and child accordingly
+         */
 
 
 
