@@ -84,6 +84,8 @@ public class xpath {
         /*
         if there were more than one element than use indexation
         (//button[@title='Add to Cart']/child::i)[3]
+        last() function also used
+        (//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()]
          */
         driver.findElement(By.xpath("//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')]"));
 
@@ -97,6 +99,23 @@ public class xpath {
         //div[@class ='nav float-start']/descendant::form[@id='form-currency']
         /* (//div[@class ='nav float-start']/descendant::form)[1] */
         driver.findElement(By.xpath("//div[@class ='nav float-start']/descendant::form"));
+
+        //following siblings
+        //div[@class = 'nav float-start']/following::div
+        //div[@class = 'nav float-start']/following-sibling::div
+        //div[@class = 'nav float-start']/following-sibling::div[@class = 'nav float-end']
+        driver.findElement(By.xpath("//div[@class = 'nav float-start']/following-sibling::div"));
+
+        //preceding siblings
+        //div[@class = 'nav float-end']/preceding-sibling::div[@class ='nav float-start']
+        //div[@class = 'nav float-end']/preceding::div
+        //div[@class = 'nav float-end']/preceding-sibling::div
+        driver.findElement(By.xpath("//div[@class = 'nav float-end']/preceding-sibling::div[@class ='nav float-start']"));
+
+        //we can use last() functions
+        /* (//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()] */
+        driver.findElement(By.xpath("(//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')])[last()]"));
+
         
 
 
