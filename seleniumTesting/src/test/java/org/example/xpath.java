@@ -59,7 +59,47 @@ public class xpath {
         driver.findElement(By.xpath("//div[contains(@class, 'col-12')]/a/img"));
 
         //axes
+        /*
+                                            ancestor
+                                            parent
+        preceding Sibling   <--------->     self      <--------->   following sibling
+                                            child
+                                            descendant
+         */
 
-        driver.quit();
+        //parent
+        //button[@title='Add to Cart']/parent::div
+        //button[@title='Add to Cart']/parent::div[@class ='button-group']
+        /*
+        if there were more than one element than use indexation
+        (//button[@title='Add to Cart']/parent::div)[1]
+         */
+        driver.findElement(By.xpath("//button[@title='Add to Cart']/parent::div"));
+        driver.findElement(By.xpath("//button[@title='Add to Cart']/parent::div[@class ='button-group']"));
+
+
+        //child
+        //button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')]
+        //button[@title='Add to Cart']/child::i
+        /*
+        if there were more than one element than use indexation
+        (//button[@title='Add to Cart']/child::i)[3]
+         */
+        driver.findElement(By.xpath("//button[@title='Add to Cart']/child::i[contains(@class , 'fa-solid')]"));
+
+        //ancestor
+        //i[contains(@class, 'fa-solid')]/ancestor::div[@class = 'button-group']
+        /* (//i[contains(@class, 'fa-solid')]/ancestor::div[@class = 'button-group'])[2]*/
+        driver.findElement(By.xpath("//i[contains(@class, 'fa-solid')]/ancestor::div[@class = 'button-group']"));
+
+        //descendant
+        //div[@class ='nav float-start']/descendant::form
+        //div[@class ='nav float-start']/descendant::form[@id='form-currency']
+        /* (//div[@class ='nav float-start']/descendant::form)[1] */
+        driver.findElement(By.xpath("//div[@class ='nav float-start']/descendant::form"));
+        
+
+
+
     }
 }
