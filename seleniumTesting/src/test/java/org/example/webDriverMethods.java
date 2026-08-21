@@ -11,7 +11,7 @@ import java.time.Duration;
 import java.util.Set;
 
 public class webDriverMethods {
-    
+
     /*
           5 different categories of methods
     1. get methods -can be accessed using web driver instance
