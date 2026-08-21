@@ -31,7 +31,7 @@ public class waitMethods {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-        
+
 
         //implicit wait
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -53,9 +53,7 @@ public class waitMethods {
         WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'orangehrm-login-button')]")));
         element2.click();
 
-
-
-
+        
         //fluent wait
         FluentWait<WebDriver> myWait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
