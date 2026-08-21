@@ -53,7 +53,7 @@ public class waitMethods {
         WebElement element2 = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class, 'orangehrm-login-button')]")));
         element2.click();
 
-        
+
         //fluent wait
         FluentWait<WebDriver> myWait = new FluentWait<WebDriver>(driver)
                 .withTimeout(Duration.ofSeconds(30))
