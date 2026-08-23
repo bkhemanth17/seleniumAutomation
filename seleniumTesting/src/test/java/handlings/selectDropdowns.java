@@ -20,6 +20,12 @@ public class selectDropdowns {
     select.selectByValue();
     select.selectByVisibleText();
     select.selectByIndex();
+    deselectByVisibleText();
+    deselectByIndex();
+    deselectByValue();
+    deselectAll();
+    getAllSelectedOptions();
+    getFirstSelectedOption();
 
     2. Bootstrap dropdowns (it has div elements buttons modern css style)
     3. hidden dropdowns
