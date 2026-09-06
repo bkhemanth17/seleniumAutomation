@@ -9,7 +9,7 @@ import java.time.Duration;
 public class keyBoardActions {
 
     /*
-    
+
     Key Board Actions
     select (CTRL+A) -> actions.keyDown(Keys.CONTROL).sendKeys("A").keyUp(Keys.CONTROL).perform();
     copy (CTRL+C)-> actions.keyDown(Keys.CONTROL).sendKeys("C").keyUp(Keys.CONTROL).perform();
