@@ -59,7 +59,7 @@ public class fileUpload {
                 System.out.println("no files uploaded...");
             }
         }
-        
+
         //validating by file (number of files)
         if(uploaded == 3){
             System.out.println("all files uploaded successfully...");
@@ -76,7 +76,7 @@ public class fileUpload {
                 System.out.println("files are not matching...");
             }
         }
-
+        
         driver.quit();
     }
 }
