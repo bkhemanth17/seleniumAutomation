@@ -19,6 +19,16 @@ add dependency for apache POI -> mvn repository
         1. apache POI common - https://mvnrepository.com/artifact/org.apache.poi/poi
         2. Apache POI API Based On OPC and OOXML Schemas - https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
 
+        additional add Log4j library: https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+
+excel file -> workbook -> sheets -> rows -> cells(read/write)
+
+open in read/write modes 2 classes (fileInputStream and fileOutputStream) -> java classes only to do operation
+in read/write
+fileInputStream - > read (throws file not found exception)
+fileOutputStream -> write
+
+apache poi classes -> XSSFWorkbook, XSSFSheet, XSSFRow, XSSFCell
 
 
 
