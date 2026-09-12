@@ -1,0 +1,24 @@
+data driven testing
+using excel file
+read, write, update data -> from excel sheet
+prepare test data in excel files, read from excel and use it automation
+pass to application use it for testing
+
+by default selenium will not support excel or data driven it will works for web automation
+integrate with third party libraries Apache POI library (api)
+
+java project with maven integration of apache poi libraries to maven
+get apache poi library classes and work with excel files.
+
+documentation: https://poi.apache.org/
+https://poi.apache.org/apidocs/index.html
+
+add dependency for apache POI -> mvn repository
+
+    2 libraries are required:
+        1. apache POI common - https://mvnrepository.com/artifact/org.apache.poi/poi
+        2. Apache POI API Based On OPC and OOXML Schemas - https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml
+
+
+
+
